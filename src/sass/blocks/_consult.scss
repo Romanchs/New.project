@@ -1,0 +1,15 @@
+.consult {
+    min-height: 680px;
+    padding: 100px 0 92px 0;
+    background: url(../../img/bg/bg_delivery.jpg) center (center / cover) no-repeat;
+    &__descr {
+        margin-top: 80px;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+    }
+    &__forms {
+        margin-top: 36px;
+    }
+}
