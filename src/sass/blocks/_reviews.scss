@@ -1,0 +1,38 @@
+.reviews {
+    padding-bottom: 71px;
+    &__comment {
+        display: flex;
+        margin-top: 100px;
+        justify-content: center;
+        img {
+            width: 169px;
+            height: 169px;
+            margin-right: 62px;
+        }
+        &:first-child {
+            margin-top: 70px;
+        }
+    }
+    &__descr {
+        display: flex;
+        flex-direction: column;
+    }
+    &__name {
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__marafon {
+        margin-top: 10px;
+        color: #646464;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &__text {
+        width: 685px;
+        margin-top: 19px;
+        color: #0d0d0d;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
