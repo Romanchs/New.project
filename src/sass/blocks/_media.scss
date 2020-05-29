@@ -1,0 +1,57 @@
+@media (max-width: 991px) {
+    .promo {
+        &__wrapper {
+            align-items: center;
+        }
+    }
+    .advantages {
+        padding-top: 50px;
+        &__boxes {
+            margin-top: 45px;
+            justify-content: space-around;
+        }
+        &__box {
+            width: 214px;
+        }
+        &__descr {
+            font-size: 12px;
+        }
+    }
+    .consult {
+        padding-top: 50px;
+        .title_left {
+            text-align: center;
+            font-size: 32px;
+        }
+        &__descr {
+            text-align: center;
+            margin-top: 40px;
+        }
+        &__forms {
+            .feed-forms {
+                margin: 0 auto;
+            }
+        }
+    }
+    .catalog {
+        &__content {
+            justify-content: center;
+        }
+        .catalog-item {
+            margin: 0 20px 20px 20px;
+        }
+    }
+    .reviews {
+        &__text {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
+}
