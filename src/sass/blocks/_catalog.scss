@@ -35,6 +35,9 @@
             background-color: $main-color;
             border: none;
         }
+        &__mobile {
+            display: none;
+        }
     }
     &__content {
         margin-top: 60px;

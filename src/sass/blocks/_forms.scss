@@ -19,3 +19,33 @@
         }
     }
 }
+.consult {
+    &__forms {
+        .error {
+            border: 1px solid red;
+        }
+        label.error {
+            display: block;
+            font-size: 10px;
+            color: red;
+            border: none;
+            text-align: center;
+            margin: 10px 0;
+        }
+    }
+}
+.modal {
+    &__wrapper {
+        .error {
+            border: 1px solid red;
+        }
+        label.error {
+            display: block;
+            font-size: 10px;
+            color: red;
+            border: none;
+            text-align: center;
+            margin: 10px 0;
+        }
+    }
+}

@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Pulse</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap reboot -->
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -13,6 +15,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <!-- Slider Slick -->
     <link rel="stylesheet" href="css/slick.css">
+    <!-- Animations -->
+    <link rel="stylesheet" href="css/animate.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.min.css">
 
@@ -20,7 +24,7 @@
 
   <body>
     
-    <section class="promo">
+    <section id="up" class="promo">
       <div class="container">
 
         <header class="header">
@@ -33,7 +37,7 @@
           </div>
           <div class="header__contacts">
             <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
-            <button class="button">заказать звонок</button>
+            <button data-modal="consultation" class="button">заказать звонок</button>
           </div>
         </header>
 
@@ -57,7 +61,7 @@
             </div>
           </div>
 
-          <button class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
+          <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
           <div class="promo__link">
             или
             <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -86,7 +90,7 @@
               </div>
             </div>
             <div class="advantages__box">
-              <img src="icons/heart.png" alt="heart">
+              <img src="icons/heart.png" alt="heart" class="advantages__icon advantages__icon_animated">
               <div class="advantages__subheader">
                 Заботимся о здоровье
               </div>
@@ -119,17 +123,17 @@
 
           <div class="consult__descr">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</div>
 
-          <div class="consult__forms">
+          <div class="consult__forms" id="consultation-form">
 
             <form action="#" class="feed-forms">
               <div class="feed-forms__input">
-                <input required type="text" name="username" placeholder="Ваше имя">
+                <input type="text" name="name" placeholder="Ваше имя">
               </div>
               <div class="feed-forms__input">
-                <input required type="number" name="phone" placeholder="Ваш телефон">
+                <input name="phone" placeholder="Ваш телефон">
               </div>
               <div class="feed-forms__input">
-                <input required type="email" name="email" placeholder="Ваш E-mail">
+                <input type="email" name="email" placeholder="Ваш E-mail">
               </div>
               <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
@@ -141,7 +145,7 @@
       </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
       <div class="container">
 
         <div class="carousel__inner">
@@ -157,7 +161,7 @@
         </div>
 
       </div>
-    </section>
+    </div>
 
     <section class="catalog">
       <div class="container">
@@ -167,9 +171,18 @@
         </h2>
 
         <ul class="catalog__tabs">
-          <li class="catalog__tab catalog__tab_active"><div>Для фитнеса</div></li>
-          <li class="catalog__tab"><div>для бега</div></li>
-          <li class="catalog__tab"><div>для триатлона</div></li>
+          <li class="catalog__tab catalog__tab_active">
+            <div class="catalog__tab__desktop">Для фитнеса</div>
+            <div class="catalog__tab__mobile">фитнес</div>
+          </li>
+          <li class="catalog__tab">
+            <div class="catalog__tab__desktop">для бега</div>
+            <div class="catalog__tab__mobile">бег</div>
+          </li>
+          <li class="catalog__tab">
+            <div class="catalog__tab__desktop">для триатлона</div>
+            <div class="catalog__tab__mobile">триатлон</div>
+          </li>
         </ul>
 
         <div class="catalog__content catalog__content_active">
@@ -247,7 +260,7 @@
                   <img src="img/boxes/product_boxes.jpg" alt="product" class="catalog-item__img">
                 </div>
                 <div class="catalog-item__mobile-info">
-                  <div class="catalog-item__subt">Пульсометр Polar FT1</div>
+                  <div class="catalog-item__subt">Пульсометр Polar FT2</div>
                   <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                   <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                 </div>
@@ -487,7 +500,7 @@
         </h2>
 
         <div class="reviews__wrapper">
-          <div class="reviews__comment">
+          <div class="reviews__comment animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay=".5s">
             <img src="img/comments/commets_avatar1.png" alt="avatar">
 
             <div class="reviews__descr">
@@ -507,7 +520,7 @@
             </div>
           </div>
 
-          <div class="reviews__comment">
+          <div class="reviews__comment animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay=".5s">
             <img src="img/comments/commets_avatar2.png" alt="avatar">
 
             <div class="reviews__descr">
@@ -525,7 +538,7 @@
             </div>
           </div>
 
-          <div class="reviews__comment">
+          <div class="reviews__comment animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay=".5s">
             <img src="img/comments/commets_avatar3.png" alt="avatar">
 
             <div class="reviews__descr">
@@ -549,7 +562,7 @@
     </section>
 
     <footer class="footer">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.1569715158867!2d35.05035772444456!3d48.46672620016164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2c2c60241bd%3A0x999c964048051b3e!2z0JzQntCh0KItQ9C40YLQuA!5e0!3m2!1sru!2sua!4v1590758459042!5m2!1sru!2sua" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.1569715158867!2d35.05035772444456!3d48.46672620016164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2c2c60241bd%3A0x999c964048051b3e!2z0JzQntCh0KItQ9C40YLQuA!5e0!3m2!1sru!2sua!4v1590758459042!5m2!1sru!2sua" width="100%" height="630" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
       <div class="footer__info">
 
@@ -574,9 +587,84 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+    <div class="modal">
+      <div class="overlay"></div>
+
+      <div class="modal__wrapper" id="consultation">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">
+          Просто заполните форму заявки
+        </div>
+
+        <div class="modal__descr">
+          и мы перезвоним вам в течении 10 минут
+        </div>
+
+        <div class="modal__forms">
+          <form action="#" class="feed-forms">
+            <div class="feed-forms__input">
+              <input type="text" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="feed-forms__input">
+              <input name="phone" placeholder="Ваш телефон">
+            </div>
+            <div class="feed-forms__input">
+              <input type="email" name="email" placeholder="Ваш E-mail">
+            </div>
+            <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal__wrapper" id="order">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">
+          Ваш заказ:
+        </div>
+
+        <div class="modal__descr">
+          Пульсометр Polar FT1
+        </div>
+
+        <div class="modal__forms">
+          <form action="#" class="feed-forms">
+            <div class="feed-forms__input">
+              <input type="text" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="feed-forms__input">
+              <input name="phone" placeholder="Ваш телефон">
+            </div>
+            <div class="feed-forms__input">
+              <input type="email" name="email" placeholder="Ваш E-mail">
+            </div>
+            <button class="button button_submit">Купить</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal__wrapper modal_mini" id="thanks">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">
+          Спасибо за вашу заявку!
+        </div>
+
+        <div class="modal__descr">
+          Наш менеджер свяжется с вами <br> в ближайшее время!
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#up" class="pageup">
+      <img src="icons/circle-up.svg" alt="up">
+    </a>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 
